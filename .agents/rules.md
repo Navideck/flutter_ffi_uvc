@@ -9,7 +9,6 @@ Read this first. Read other docs only when the task touches that area.
 
 - Public API surface, new features, platform-specific members: read `.agents/docs/scope.md`.
 - Native backends, preview pipeline, formats (H264), mode validation: read `.agents/docs/native-strategy.md`.
-- `CHANGELOG.md` entry: read `.agents/docs/changelog-style.md`.
 - Version bump / release: read `.agents/docs/release-checklist.md`.
 - `LICENSE`, `NOTICES`, or a bundled third-party component changed: read `.agents/docs/license-notices.md`.
 - Windows backend behavior, H264 rationale: read `doc/windows-backend.md`.

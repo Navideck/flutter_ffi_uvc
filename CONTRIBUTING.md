@@ -4,10 +4,9 @@
 
 Commit subjects start with a type prefix:
 
-- `feat` / `fix` / `perf` / `change`: package-visible changes
-- `docs` / `example`: shipped non-code changes (docs and the example app
-  are part of the published package)
-- `chore`: repo-internal work (agent rules, skills, tooling)
+- `feat` / `fix` / `perf` / `change`: package code
+- `docs` / `example`: documentation and the example app
+- `chore`: everything else (agent rules, CI, tooling)
 
 Split mixed commits so each part keeps its prefix.
 
@@ -16,15 +15,15 @@ Split mixed commits so each part keeps its prefix.
 The topmost CHANGELOG section is `## <version>-wip`; it accumulates
 bullets for the next release.
 
-- Every non-`chore` commit adds its bullet to that section in the same
-  commit. If the section does not exist yet, open it and set pubspec
-  `version:` to the same `-wip` value in that commit.
-- Pick the smallest bump the accumulated changes justify (docs or fix:
-  patch); rename the section heading and pubspec when a later change
-  needs a bigger bump.
-- `chore` commits add no bullet by default; include one when it is worth
-  recording.
-- Bullet style: `.agents/docs/changelog-style.md`.
+- `feat`, `fix`, `perf`, and `change` commits add their bullet in the
+  same commit. Other commits add one only when the change matters to a
+  user of the package. If the section does not exist yet, open it and set
+  pubspec `version:` to the same `-wip` value in that commit.
+- Pick the smallest bump the accumulated changes justify; rename the
+  section heading and pubspec when a later change needs a bigger bump.
+- Flat `- ` bullets, details of one change as sub-bullets under it. Start
+  with a lowercase verb (`add`, `change`, `fix`, ...) or a scope prefix
+  (`docs:`, `example:`). Name public symbols in backticks.
 
 ## Engineering rules
 
