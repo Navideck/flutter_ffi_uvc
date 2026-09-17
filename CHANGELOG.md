@@ -1,4 +1,4 @@
-## 1.0.1
+## 1.0.1-wip
 
 - fix opening UVC 1.5 devices that report `bcdUVC` `0x0150` (for example action
   cameras exposing a USB webcam mode): `uvc_parse_vc_header()` no longer fails
